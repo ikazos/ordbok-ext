@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "ordbok-ext",
+    "version": "1.0",
+
+    "description": "svensk-engelska ordbok",
+
+    "icons": {
+        "48": "library_books-24px.svg",
+        "96": "library_books-24px.svg"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["ordbok-ext.js"]
+        }
+    ],
+
+    "browser_action": {
+        "default_icon": "library_books-24px.svg",
+        "default_title": "ordbok-ext",
+        "default_popup": "popup.html"
+    },
+
+    "permissions": ["https://ne.ord.se/*"]
+}
